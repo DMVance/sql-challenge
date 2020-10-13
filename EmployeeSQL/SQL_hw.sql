@@ -62,5 +62,9 @@ SELECT e.first_name, e.last_name, dp.dept_name, dp.dept_no, dp.dept_name, dm.emp
 	inner join dept_manager as dm on dm.emp_no = e.emp_no
 	inner join departments as dp on dp.dept_no = dm.dept_no
 
+SELECT e.emp_no, e.last_name, e.first_name, dp.dept_name FROM employees as e
+	inner join dept_emp as de on de.emp_no = e.emp_no
+	inner join departments as dp on dp.dept_no = de.dept_no 
+
 
 
