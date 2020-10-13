@@ -51,3 +51,9 @@ REFERENCES "departments" ("dept_no");
 ALTER TABLE "salaries" ADD CONSTRAINT "fk_salaries_emp_no" FOREIGN KEY("emp_no")
 REFERENCES "employees" ("emp_no");
 
+SELECT employees.emp_no, last_name, first_name, sex, salary 
+	FROM employees
+    inner join salaries on employees.emp_no = salaries.emp_no
+
+
+
