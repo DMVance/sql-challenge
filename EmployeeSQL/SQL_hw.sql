@@ -58,5 +58,9 @@ SELECT employees.emp_no, last_name, first_name, sex, salary
 SELECT first_name, last_name, hire_date FROM employees
 	WHERE hire_date > '1986-01-01' AND hire_date < '1987-01-01'
 
+SELECT e.first_name, e.last_name, dp.dept_name, dp.dept_no, dp.dept_name, dm.emp_no FROM employees as e
+	inner join dept_manager as dm on dm.emp_no = e.emp_no
+	inner join departments as dp on dp.dept_no = dm.dept_no
+
 
 
