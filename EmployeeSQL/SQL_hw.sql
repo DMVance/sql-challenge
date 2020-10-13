@@ -75,5 +75,10 @@ SELECT e.emp_no, e.last_name, e.first_name, dp.dept_name FROM employees as e
 	INNER JOIN departments as dp on dp.dept_no = de.dept_no
 	WHERE dp.dept_name = 'Sales';
 
+SELECT e.emp_no, e.last_name, e.first_name, dp.dept_name FROM employees as e
+	INNER JOIN dept_emp as de on de.emp_no = e.emp_no
+	INNER JOIN departments as dp on dp.dept_no = de.dept_no
+	WHERE dp.dept_name = 'Sales' or dp.dept_name = 'Development';
+
 
 
