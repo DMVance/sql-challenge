@@ -32,3 +32,6 @@ CREATE TABLE "salaries" (
     "emp_no" INT NOT NULL PRIMARY KEY,
     "salary" INT NOT NULL
 );
+
+ALTER TABLE "employees" ADD CONSTRAINT "fk_employees_emp_title_id" FOREIGN KEY("emp_title_id")
+REFERENCES "titles" ("title_id");
